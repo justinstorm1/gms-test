@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+<header>
+    <div class="container h-100 w-100 d-flex align-items-center">
+        <div class="row h-100 w-100 d-flex align-items-center">
+            <div class="col col-lg-6 col-md-8 text">
+                <h1>Welcome to Global Mobile Software!</h1>
+                <hr>
+                <p>This is some body text that is in the header. Just need to add some more random words and phrases so it looks kinda real.</p>
+                <a href="#footer">
+                    <span>Explore</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/vr.webp') center/cover no-repeat;
+
+  .col.text {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    hr {
+      height: 4px;
+      width: 3rem;
+      background: #fff;
+      border: none;
+      opacity: 1;
+      border-radius: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 0;
+      background: linear-gradient(to bottom, var(--lightblue), var(--darkblue));
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    a::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: -100%;
+      left: 0;
+      background: var(--dark);
+      transition: 0.5s ease;
+    }
+    a:hover::after {
+      top: 0;
+    }
+    a span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+</style>
+
+</body>
+</html>
