@@ -46,6 +46,7 @@ Promise.all([
 
 function setActiveLink() {
     let currentPath = window.location.pathname;
+    console.log(currentPath);
     if (currentPath.startsWith('/')) {
         currentPath = currentPath.substring(1);
     }
