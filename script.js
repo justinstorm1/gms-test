@@ -46,9 +46,13 @@ Promise.all([
 
 function setActiveLink() {
     let currentPath = window.location.pathname;
-    console.log(currentPath);
     if (currentPath.startsWith('/')) {
         currentPath = currentPath.substring(1);
+        console.log(currentPath);
+    }
+    if (window.location.hostname.includes('github.com') || window.location.hostname.includes('github.io')) {
+        currentPath = currentPath.split('/').pop();
+        console.log(currentPath)
     }
     const sidebarLinks = document.querySelectorAll('.sidebar .link');
 
