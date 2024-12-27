@@ -106,10 +106,24 @@ function setActiveLink() {
 function sidebarToggle() {
     sidebar.classList.toggle('show');
     sidebarUnder.classList.toggle('show');
+
+    closeAllSidebarDropdowns();
 }
 
 function navbarTogglerToggle() {
     navbarToggler.classList.toggle('clicked');
+}
+
+function closeAllSidebarDropdowns() {
+    const dropdownBtns = document.querySelectorAll('.dropdownButton');
+
+    dropdownBtns.forEach(dropdownBtn => {
+        const dropdownList = dropdownBtn.nextElementSibling;
+        const svg = dropdownBtn.querySelector('span svg');
+        dropdownList.classList.remove('active');
+        svg.classList.remove('rotate');
+        }
+    );
 }
 
 window.addEventListener('resize', () => {
