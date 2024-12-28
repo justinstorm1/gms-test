@@ -55,7 +55,7 @@ function setActiveLink() {
         console.log(currentPath);
 
         if (currentPath === '') {
-            currentPath === 'index.html';
+            currentPath = 'index.html';
         }
     }
     const sidebarLinks = document.querySelectorAll('.sidebar .link');
