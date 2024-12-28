@@ -52,7 +52,11 @@ function setActiveLink() {
     }
     if (window.location.hostname.includes('github.com') || window.location.hostname.includes('github.io')) {
         currentPath = currentPath.split('/').pop();
-        console.log(currentPath)
+        console.log(currentPath);
+
+        if (currentPath === '') {
+            currentPath === 'index.html';
+        }
     }
     const sidebarLinks = document.querySelectorAll('.sidebar .link');
 
